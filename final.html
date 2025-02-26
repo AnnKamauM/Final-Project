@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiss Chocolate</title>
+    <style>
+      .container {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        padding: 20px;
+        background-color: white;
+        border: 1px solid fuchsia;
+      }
+      footer {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+      .learn-more {
+        display: block;
+        margin-top: 30px;
+        text-decoration: none;
+      }
+      button {
+        background-color: blue;
+        color: white;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 200ms ease-in;
+      }
+      button:hover {
+        background-color: blueviolet;
+        color: black;
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 0 auto;
+      }
+      .line1 {
+        text-align: justify;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .highlight {
+        color: purple;
+        background-color: blanchedalmond;
+      }
+      h1 {
+        text-align: center;
+        color: blue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love swiss chocolates</h1>
+      <h2><em>Lindt Swiss White Chocolate</em> is my favorite</h2>
+      <hr />
+      <br />
+      <div class="content">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/156/033/original/images.jpg?1738173283"
+          alt="A photo of swiss chocolate1"
+          target="_blank"
+          length="300"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/156/157/original/download.jpg?1738272914"
+          alt="a photo of brown chocolate swiss2"
+          target="_blank"
+          width="300"
+        />
+      </div>
+      <br />
+      <p class="line1">
+        <strong>Swiss chocolate</strong>
+        <span class="highlight"
+          >(German: Schweizer Schokolade; French: Chocolat Suisse; Italian:
+          Cioccolato Svizzero)</span
+        >
+        is chocolate produced in Switzerland. Switzerland's chocolates have
+        earned an international reputation for high quality with many famous
+        international chocolate brands. Switzerland is particularly renowned for
+        its milk chocolate, the most consumed type of chocolate. In 1875, a
+        Swiss confectioner, Daniel Peter, developed the first solid milk
+        chocolate using condensed milk, which had been invented by Henri Nestlé,
+        who was Peter's neighbour in Vevey.[1][2] In addition to milk, a wide
+        variety of ingredients other than cocoa are used to make the most
+        popular chocolate bars. They notably include nuts (mostly hazelnuts and
+        almonds) and dried fruits (raisins).
+
+        <a
+          href="https://en.wikipedia.org/wiki/Swiss_chocolate"
+          class="learn-more"
+        >
+          Click here to learn more on wikipedia
+        </a>
+      </p>
+
+      <button>🍫Buy Some chocolate</button>
+      <p class="footer">Article by Ann Kamau</p>
+    </div>
+    <script>
+      function buyer() {
+        let name = prompt("What is your name?");
+        let email = prompt("Please enter your email address");
+        let age = prompt("How old are you?");
+
+        if (age <= 16) {
+          alert(
+            `Sorry ${name}, You need to be 18 to buy our chocolates.We'll be in touch via ${email}💝`
+          );
+        } else {
+          alert(
+            `Thank you ${name},Enjoy your order.We'll be in touch via ${email}🍫`
+          );
+        }
+      }
+
+      let buyButton = document.querySelector("button");
+      buyButton.addEventListener("click", buyer);
+    </script>
+  </body>
+</html>
